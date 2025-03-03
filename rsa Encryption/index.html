@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSA Encryption Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="themeToggle">🌙 Dark Mode</button>  <!-- Dark Mode Button -->
+
+    <h1>RSA Encryption Tool</h1>
+
+    <div class="key-section">
+      <h2>Generate RSA Keys</h2>
+      <button onclick="generateKeys()">Generate Keys</button>
+      <div id="publicKey">
+        <h3>Public Key:</h3>
+        <p id="e"></p>
+        <p id="n"></p>
+      </div>
+      <div id="privateKey">
+        <h3>Private Key:</h3>
+        <p id="d"></p>
+        <p id="nPrivate"></p>
+      </div>
+    </div>
+
+    <div class="encryption-section">
+      <h2>Encrypt a Message</h2>
+      <input type="text" id="message" placeholder="Enter message">
+      <button onclick="encryptMessage()">Encrypt</button>
+      <p>Encrypted Message: <span id="encryptedMessage"></span></p>
+    </div>
+
+    <div class="decryption-section">
+      <h2>Decrypt the Message</h2>
+      <input type="text" id="cipherText" placeholder="Enter encrypted message">
+      <button onclick="decryptMessage()">Decrypt</button>
+      <p>Decrypted Message: <span id="decryptedMessage"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
