@@ -99,3 +99,54 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById('nPrivate').textContent = `n = ${n}`;
   }
   
+  // Function to convert a string to an array of ASCII values
+  function stringToAsciiArray(str) {
+    return str.split("").map(char => char.charCodeAt(0));
+  }
+  
+  // Function to convert an ASCII array back to a string
+  function asciiArrayToString(arr) {
+    return arr.map(num => String.fromCharCode(num)).join("");
+  }
+  
+  // Encrypt message (string to encrypted numbers)
+  function encryptMessage() {
+    let message = document.getElementById('message').value;
+  
+    // Check if the message is empty
+    if (!message.trim()) {
+      alert("Please enter a valid message.");
+      return;
+    }
+  
+    let asciiValues = stringToAsciiArray(message);
+  
+    // Encrypt each character (convert each number to encrypted value)
+    let encryptedValues = asciiValues.map(num => modExp(num, publicKey, n));
+  
+    // Display the encrypted message
+    document.getElementById('encryptedMessage').textContent = encryptedValues.join(" ");
+  }
+  
+  // Decrypt message (encrypted numbers back to string)
+  function decryptMessage() {
+    let cipherText = document.getElementById('cipherText').value;
+  
+    // Check if the cipher text is empty
+    if (!cipherText.trim()) {
+      alert("Please enter a valid encrypted message.");
+      return;
+    }
+  
+    let encryptedNumbers = cipherText.split(" ").map(Number);
+  
+    // Decrypt each encrypted number to get the ASCII values
+    let decryptedAsciiValues = encryptedNumbers.map(num => modExp(num, privateKey, n));
+  
+    // Convert ASCII values back to a string
+    let decryptedMessage = asciiArrayToString(decryptedAsciiValues);
+  
+    // Display the decrypted message
+    document.getElementById('decryptedMessage').textContent = decryptedMessage;
+  }
+  
