@@ -94,11 +94,13 @@ For actual cryptographic applications, always use vetted libraries and follow be
 
 **Project Screenshot**  ## 📜 Project Screenshot
 
+# 📜 Project Screenshot
+
 ### Light Mode
-![Light Mode](ss1.png)
+![Light Mode](rsa%20Encryption/ss1.png)
 
 ### Dark Mode
-![Dark Mode](ss2.png)
+![Dark Mode](rsa%20Encryption/ss2.png)
 
 
 ---
