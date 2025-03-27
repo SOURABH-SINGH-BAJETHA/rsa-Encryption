@@ -103,5 +103,3 @@ For actual cryptographic applications, always use vetted libraries and follow be
 
 ---
 
-If you'd like, I can also help you package this into a **ready-to-upload GitHub repo with proper badges & styling**.  
-Shall I?
