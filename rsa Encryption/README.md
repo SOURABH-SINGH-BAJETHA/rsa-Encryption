@@ -92,10 +92,14 @@ For actual cryptographic applications, always use vetted libraries and follow be
 
 ---
 
-**Project Screenshot**  
-*Add actual screenshot here after uploading.*
+**Project Screenshot**  ## 📜 Project Screenshot
+
+### Light Mode
+![Light Mode](ss1.png)
+
+### Dark Mode
+![Dark Mode](ss2.png)
+
 
 ---
 
-If you'd like, I can also help you package this into a **ready-to-upload GitHub repo with proper badges & styling**.  
-Shall I?
